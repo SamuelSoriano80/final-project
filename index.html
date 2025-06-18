@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GreenGuide – Global Sustainability Stats & Tips</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container header-flex">
+            <div class="logo-title">
+                <a href="index.html" class="logo-title" style="text-decoration: none; color: inherit;">
+                    <img src="images/logo.png" alt="GreenGuide logo" class="logo" />
+                    <div>
+                        <h1>GreenGuide</h1>
+                        <p>Your gateway to global sustainability insights and eco-tips</p>
+                    </div>
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="quotes.html">Saved Quotes</a></li>
+                    <li><a href="rankings.html">Top vs Bottom Rankings</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Country Selector -->
+        <section id="country-selector" class="container">
+            <h2>Select a Country</h2>
+            <input type="text" id="countrySearch" placeholder="Type a country name..." />
+            <div id="countryDropdown"></div>
+        </section>
+
+        <!-- Sustainability Stats -->
+        <section id="country-stats" class="container">
+            <h2>Sustainability Stats</h2>
+            <div class="stats-cards">
+                <!-- Cards for CO2, energy use, renewables will be inserted here -->
+            </div>
+        </section>
+
+        <!-- Chart Comparison Section -->
+        <section id="chart-comparison" class="container">
+            <h2>Compare Countries</h2>
+            <div id="comparisonChart">
+                <!-- Chart.js canvas or SVG charts will go here -->
+            </div>
+        </section>
+
+        <!-- Tip & Quote Section -->
+        <section id="eco-tips" class="container">
+            <h2>Eco Tip of the Day</h2>
+            <div class="card flip-card">
+                <!-- Front and back of flip card -->
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <p>Tip loads here...</p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>Challenge or follow-up tip</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="daily-quote" class="container">
+            <h2>Inspirational Quote</h2>
+            <blockquote id="quoteText">Quote will appear here...</blockquote>
+            <cite id="quoteAuthor">– Author</cite>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <img src="images/logo.png" alt="Minimalistic leaves around a world globe" width="50px" <p>&copy; 2025
+            GreenGuide | Built with sustainability in mind 🌿</p>
+        </div>
+    </footer>
+
+    <script type="module" src="scripts/worldbank.js"></script>
+</body>
+
+</html>
