@@ -46,15 +46,23 @@
         <section id="country-stats" class="container">
             <h2>Sustainability Stats</h2>
             <div class="stats-cards">
-                <!-- Cards for CO2, energy use, renewables will be inserted here -->
             </div>
         </section>
 
         <!-- Chart Comparison Section -->
         <section id="chart-comparison" class="container">
             <h2>Compare Countries</h2>
-            <div id="comparisonChart">
-                <!-- Chart.js canvas or SVG charts will go here -->
+            <div class="comparison-controls">
+                <label for="country1">Country 1:</label>
+                <select id="country1"></select>
+
+                <label for="country2">Country 2:</label>
+                <select id="country2"></select>
+
+                <button id="compareBtn">Compare</button>
+            </div>
+
+            <div id="comparisonChart" class="comparison-chart">
             </div>
         </section>
 
@@ -62,7 +70,6 @@
         <section id="eco-tips" class="container">
             <h2>Eco Tip of the Day</h2>
             <div class="card flip-card">
-                <!-- Front and back of flip card -->
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
                         <p>Tip loads here...</p>
@@ -78,17 +85,21 @@
             <h2>Inspirational Quote</h2>
             <blockquote id="quoteText">Quote will appear here...</blockquote>
             <cite id="quoteAuthor">– Author</cite>
+            <button id="saveQuoteBtn">⭐ Save to Favorites</button>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <img src="images/logo.png" alt="Minimalistic leaves around a world globe" width="50px" <p>&copy; 2025
-            GreenGuide | Built with sustainability in mind 🌿</p>
+            <img src="images/logo.png" alt="Minimalistic leaves around a world globe" width="50">
+            <p>&copy; 2025
+                GreenGuide | Built with sustainability in mind 🌿</p>
         </div>
     </footer>
 
     <script type="module" src="scripts/worldbank.js"></script>
+    <script type="module" src="scripts/chart.js"></script>
+    <script type="module" src="scripts/tips.js"></script>
 </body>
 
 </html>

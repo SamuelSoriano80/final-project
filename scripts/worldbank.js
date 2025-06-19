@@ -8,7 +8,6 @@ const latestYear = 2021; // used this year since it has data of all countries mo
 const baseUrl = "https://api.worldbank.org/v2/country";
 const format = "json";
 
-// Mapping country names to ISO codes
 let countryList = [];
 
 async function fetchCountryList() {
@@ -17,7 +16,7 @@ async function fetchCountryList() {
     const data = await response.json();
     if (Array.isArray(data[1])) {
         countryList = data[1]
-            .filter((c) => c.region.id !== "NA") // exclude aggregates
+            .filter((c) => c.region.id !== "NA")
             .map((c) => ({
                 name: c.name,
                 code: c.id
@@ -66,13 +65,23 @@ function renderStats(stats, countryName) {
 
 function setupCountrySearch() {
     const input = document.getElementById("countrySearch");
-    input.addEventListener("input", () => {
-        const search = input.value.toLowerCase();
-        const match = countryList.find((c) => c.name.toLowerCase().startsWith(search));
-        if (match) {
-            fetchCountryStats(match.code).then((stats) => {
-                renderStats(stats, match.name);
-            });
+
+    input.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") {
+            const search = input.value.trim().toLowerCase();
+
+            const match = countryList.find((c) =>
+                c.name.toLowerCase() === search ||
+                c.name.toLowerCase().startsWith(search)
+            );
+
+            if (match) {
+                fetchCountryStats(match.code).then((stats) => {
+                    renderStats(stats, match.name);
+                });
+            } else {
+                alert("Country not found. Please try a different name.");
+            }
         }
     });
 }
