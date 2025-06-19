@@ -26,6 +26,7 @@
                 </a>
             </div>
             <nav>
+                <button id="menu-toggle" aria-label="Toggle navigation">☰</button>
                 <ul class="nav-links">
                     <li><a href="quotes.html">Saved Quotes</a></li>
                     <li><a href="rankings.html">Top vs Bottom Rankings</a></li>
@@ -35,22 +36,31 @@
     </header>
 
     <main>
-        <section class="container">
-            <h2>Top vs Bottom Sustainability Rankings</h2>
-            <div id="rankingsChart">
-                <!-- Bar chart comparing top and bottom countries will load here -->
-                <p>Loading rankings...</p>
+        <section id="chart-comparison" class="container">
+            <h2>Renewable Energy Rankings</h2>
+
+            <div id="comparison-chart" class="comparison-chart">
+                <h3>Top 5 Countries (Highest % Renewable Energy)</h3>
+                <div id="top5"></div>
+            </div>
+
+            <div id="comparison-chart" class="comparison-chart">
+                <h3>Bottom 5 Countries (Lowest % Renewable Energy)</h3>
+                <div id="bottom5"></div>
             </div>
         </section>
     </main>
 
     <footer>
         <div class="container">
+            <img src="images/logo.png" alt="Minimalistic leaves around a world globe" width="50">
             <p>&copy; 2025 GreenGuide | Built with sustainability in mind 🌿</p>
         </div>
     </footer>
 
-    <script src="rankings.js"></script>
+    <script type="module" src="scripts/main.js"></script>
+    <script src="/scripts/rankings.js"></script>
+    <script type="module" src="scripts/theme.js"></script>
 </body>
 
 </html>

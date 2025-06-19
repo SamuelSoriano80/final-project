@@ -26,6 +26,7 @@
                 </a>
             </div>
             <nav>
+                <button id="menu-toggle" aria-label="Toggle navigation">☰</button>
                 <ul class="nav-links">
                     <li><a href="quotes.html">Saved Quotes</a></li>
                     <li><a href="rankings.html">Top vs Bottom Rankings</a></li>
@@ -35,21 +36,18 @@
     </header>
 
     <main>
-        <!-- Country Selector -->
         <section id="country-selector" class="container">
             <h2>Select a Country</h2>
             <input type="text" id="countrySearch" placeholder="Type a country name..." />
             <div id="countryDropdown"></div>
         </section>
 
-        <!-- Sustainability Stats -->
         <section id="country-stats" class="container">
             <h2>Sustainability Stats</h2>
             <div class="stats-cards">
             </div>
         </section>
 
-        <!-- Chart Comparison Section -->
         <section id="chart-comparison" class="container">
             <h2>Compare Countries</h2>
             <div class="comparison-controls">
@@ -66,7 +64,6 @@
             </div>
         </section>
 
-        <!-- Tip & Quote Section -->
         <section id="eco-tips" class="container">
             <h2>Eco Tip of the Day</h2>
             <div class="card flip-card">
@@ -97,9 +94,11 @@
         </div>
     </footer>
 
+    <script type="module" src="scripts/main.js"></script>
     <script type="module" src="scripts/worldbank.js"></script>
     <script type="module" src="scripts/chart.js"></script>
     <script type="module" src="scripts/tips.js"></script>
+    <script type="module" src="scripts/theme.js"></script>
 </body>
 
 </html>

@@ -26,6 +26,7 @@
                 </a>
             </div>
             <nav>
+                <button id="menu-toggle" aria-label="Toggle navigation">☰</button>
                 <ul class="nav-links">
                     <li><a href="quotes.html">Saved Quotes</a></li>
                     <li><a href="rankings.html">Top vs Bottom Rankings</a></li>
@@ -35,10 +36,9 @@
     </header>
 
     <main>
-        <section class="container">
+        <section id="saved-quotes" class="container">
             <h2>Saved Quotes</h2>
-            <div id="savedQuotesList">
-                <!-- Dynamically load saved quotes here -->
+            <div id="quotesList">
                 <p>No saved quotes yet.</p>
             </div>
         </section>
@@ -46,11 +46,14 @@
 
     <footer>
         <div class="container">
+            <img src="images/logo.png" alt="Minimalistic leaves around a world globe" width="50">
             <p>&copy; 2025 GreenGuide | Built with sustainability in mind 🌿</p>
         </div>
     </footer>
 
-    <script src="quotes.js"></script>
+    <script type="module" src="scripts/main.js"></script>
+    <script src="scripts/quotes.js"></script>
+    <script type="module" src="scripts/theme.js"></script>
 </body>
 
 </html>
